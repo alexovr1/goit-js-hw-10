@@ -30,6 +30,8 @@ export const fetchCountries = (name) => {
         })
 
         .catch(function (error) {
+            refs.list.innerHTML = '';
+            refs.container.innerHTML = '';
             Notify.failure("Oops, there is no country with that name")
         })
 }
